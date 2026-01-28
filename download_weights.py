@@ -1,6 +1,3 @@
-"""
-Download and cache the SDXL Turbo model weights.
-"""
 
 import os
 import torch
@@ -40,3 +37,4 @@ def download_models():
 
 if __name__ == "__main__":
     download_models()
+
