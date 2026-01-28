@@ -1,0 +1,12 @@
+<script>
+async function generate() {
+  const text = document.getElementById("prompt").value;
+  const res = await fetch("/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text })
+  });
+  const data = await res.json();
+  document.getElementById("result").src = data.image_url;
+}
+</script>
